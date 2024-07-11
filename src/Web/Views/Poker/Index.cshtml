@@ -1,0 +1,134 @@
+﻿@using Web.ViewModels
+@model CreateHandViewModel
+
+<h3>Evaluate Poker Hand</h3>
+<h5>Please cards denomination in order to evaluate hand</h5>
+
+<form asp-controller="Poker" asp-action="Index" method="post">
+    <div class="row gy-3 mb-3">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Card One
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label asp-for="CardOne.Value" class="form-label"></label>
+                        <select asp-for="CardOne.Value" asp-items="Model.Values" class="form-control"></select>
+                        <span asp-validation-for="CardOne.Value"></span>
+                    </div>    
+                    <div class="mb-3">
+                        <label asp-for="CardOne.Suit" class="form-label"></label>
+                        <select asp-for="CardOne.Suit" asp-items="Model.Suits" class="form-control"></select>
+                        <span asp-validation-for="CardOne.Suit"></span>
+                    </div>    
+@*                     <div class="mb-3">
+                        <label asp-for="CardOne.NumericalValue" class="form-label"></label>
+                        <input asp-for="CardOne.NumericalValue" class="form-control"/>
+                        <span asp-validation-for="CardOne.NumericalValue"></span>
+                    </div>   *@  
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Card Two
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label asp-for="CardTwo.Value" class="form-label"></label>
+                        <select asp-for="CardTwo.Value" asp-items="Model.Values" class="form-control"></select>
+                        <span asp-validation-for="CardTwo.Value"></span>
+                    </div>    
+                    <div class="mb-3">
+                        <label asp-for="CardTwo.Suit" class="form-label"></label>
+                        <select asp-for="CardTwo.Suit" asp-items="Model.Suits" class="form-control"></select>
+                        <span asp-validation-for="CardTwo.Suit"></span>
+                    </div>    
+@*                     <div class="mb-3">
+                        <label asp-for="CardTwo.NumericalValue" class="form-label"></label>
+                        <input asp-for="CardTwo.NumericalValue" class="form-control"/>
+                        <span asp-validation-for="CardTwo.NumericalValue"></span>
+                    </div>   *@  
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Card Three
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label asp-for="CardThree.Value" class="form-label"></label>
+                        <select asp-for="CardThree.Value" asp-items="Model.Values" class="form-control"></select>
+                        <span asp-validation-for="CardThree.Value"></span>
+                    </div>    
+                    <div class="mb-3">
+                        <label asp-for="CardThree.Suit" class="form-label"></label>
+                        <select asp-for="CardThree.Suit" asp-items="Model.Suits" class="form-control"></select>
+                        <span asp-validation-for="CardThree.Suit"></span>
+                    </div>    
+@*                     <div class="mb-3">
+                        <label asp-for="CardThree.NumericalValue" class="form-label"></label>
+                        <input asp-for="CardThree.NumericalValue" class="form-control"/>
+                        <span asp-validation-for="CardThree.NumericalValue"></span>
+                    </div>   *@  
+                </div>
+            </div>
+        </div>     
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Card Four
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label asp-for="CardFour.Value" class="form-label"></label>
+                        <select asp-for="CardFour.Value" asp-items="Model.Values" class="form-control"></select>
+                        <span asp-validation-for="CardFour.Value"></span>
+                    </div>    
+                    <div class="mb-3">
+                        <label asp-for="CardFour.Suit" class="form-label"></label>
+                        <select asp-for="CardFour.Suit" asp-items="Model.Suits" class="form-control"></select>
+                        <span asp-validation-for="CardFour.Suit"></span>
+                    </div>    
+@*                     <div class="mb-3">
+                        <label asp-for="CardFour.NumericalValue" class="form-label"></label>
+                        <input asp-for="CardFour.NumericalValue" class="form-control"/>
+                        <span asp-validation-for="CardFour.NumericalValue"></span>
+                    </div>  *@   
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Card Five
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label asp-for="CardFive.Value" class="form-label"></label>
+                        <select asp-for="CardFive.Value" asp-items="Model.Values" class="form-control"></select>
+                        <span asp-validation-for="CardFive.Value"></span>
+                    </div>    
+                    <div class="mb-3">
+                        <label asp-for="CardFive.Suit" class="form-label"></label>
+                        <select asp-for="CardFive.Suit" asp-items="Model.Suits" class="form-control"></select>
+                        <span asp-validation-for="CardFive.Suit"></span>
+                    </div>    
+@*                     <div class="mb-3">
+                        <label asp-for="CardFive.NumericalValue" class="form-label"></label>
+                        <input asp-for="CardFive.NumericalValue" class="form-control"/>
+                        <span asp-validation-for="CardFive.NumericalValue"></span>
+                    </div> *@    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Evaluate Hand</button>
+</form>
